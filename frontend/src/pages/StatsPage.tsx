@@ -22,7 +22,7 @@ function formatDuration(seconds: number): string {
   return `${h}h ${m}m`
 }
 
-export default function StatsPage() {
+export function StatsPage() {
   const [stats, setStats] = useState<Stats | null>(null)
   const [range, setRange] = useState<"week" | "month">("week")
 

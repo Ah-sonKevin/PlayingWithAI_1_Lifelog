@@ -1,10 +1,11 @@
 import { useState } from "react"
+import * as React from "react"
 import { useAuth } from "@/context/AuthContext"
 import { api } from "@/lib/api"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
-export default function AuthPage() {
+export function AuthPage() {
   const [mode, setMode] = useState<"login" | "register">("login")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -18,8 +19,8 @@ export default function AuthPage() {
       const endpoint = mode === "login" ? "/auth/login" : "/auth/register"
       const data = await api.post<{ access_token: string }>(endpoint, { email, password })
       login(data.access_token)
-    } catch (err: any) {
-      setError(err.message)
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : "An error occurred")
     }
   }
 

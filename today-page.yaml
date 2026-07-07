@@ -1,0 +1,31 @@
+- generic [ref=f2e19]:
+  - banner [ref=f2e20]:
+    - generic [ref=f2e21]:
+      - generic [ref=f2e22]:
+        - link "Lifelog" [ref=f2e23] [cursor=pointer]:
+          - /url: /
+        - navigation [ref=f2e24]:
+          - link "Today" [ref=f2e25] [cursor=pointer]:
+            - /url: /
+          - link "History" [ref=f2e26] [cursor=pointer]:
+            - /url: /history
+          - link "Stats" [ref=f2e27] [cursor=pointer]:
+            - /url: /stats
+      - generic [ref=f2e28]:
+        - generic [ref=f2e29]: testuser2@example.com
+        - button "Logout" [ref=f2e30] [cursor=pointer]
+  - main [ref=f2e31]:
+    - generic [ref=f2e32]:
+      - generic [ref=f2e33]:
+        - heading "Today" [level=1] [ref=f2e34]
+        - paragraph [ref=f2e35]: lundi 6 juillet 2026
+      - generic [ref=f2e36]:
+        - generic [ref=f2e37]:
+          - heading "What are you working on?" [level=2] [ref=f2e38]
+          - paragraph [ref=f2e39]: Enter a task name to start tracking time
+        - generic [ref=f2e40]:
+          - textbox "e.g. Design review, coding, meeting..." [ref=f2e41]
+          - button "Start timer" [ref=f2e42] [cursor=pointer]
+      - generic [ref=f2e43]:
+        - heading "Today's entries" [level=2] [ref=f2e44]
+        - paragraph [ref=f2e46]: No entries yet today

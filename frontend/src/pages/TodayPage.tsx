@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect } from "react"
 import { api } from "@/lib/api"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -22,7 +22,7 @@ function formatTime(iso: string): string {
   return new Date(iso).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" })
 }
 
-export default function TodayPage() {
+export function TodayPage() {
   const [activeEntry, setActiveEntry] = useState<Entry | null>(null)
   const [entries, setEntries] = useState<Entry[]>([])
   const [label, setLabel] = useState("")

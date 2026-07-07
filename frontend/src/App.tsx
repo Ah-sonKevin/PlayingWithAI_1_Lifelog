@@ -1,9 +1,10 @@
+import * as React from "react"
 import { Routes, Route, Navigate } from "react-router-dom"
 import { useAuth } from "@/context/AuthContext"
-import AuthPage from "@/pages/AuthPage"
-import TodayPage from "@/pages/TodayPage"
-import HistoryPage from "@/pages/HistoryPage"
-import StatsPage from "@/pages/StatsPage"
+import { AuthPage } from "@/pages/AuthPage"
+import { TodayPage } from "@/pages/TodayPage"
+import { HistoryPage } from "@/pages/HistoryPage"
+import { StatsPage } from "@/pages/StatsPage"
 
 function Layout({ children }: { children: React.ReactNode }) {
   const { user, logout } = useAuth()
@@ -33,7 +34,7 @@ function Layout({ children }: { children: React.ReactNode }) {
   )
 }
 
-export default function App() {
+export function App() {
   const { user, loading } = useAuth()
 
   if (loading) {

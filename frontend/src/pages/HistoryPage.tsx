@@ -28,7 +28,7 @@ function formatTime(iso: string): string {
   return new Date(iso).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" })
 }
 
-export default function HistoryPage() {
+export function HistoryPage() {
   const [entries, setEntries] = useState<Entry[]>([])
   const [range, setRange] = useState<"day" | "week" | "month">("day")
   const [editingEntry, setEditingEntry] = useState<Entry | null>(null)
